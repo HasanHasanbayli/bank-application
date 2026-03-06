@@ -12,7 +12,9 @@ func main() {
 
 		var choice int
 		fmt.Print("Enter your choice: ")
-		if _, err := fmt.Scan(&choice); err != nil {
+		_, err := fmt.Scan(&choice)
+
+		if err != nil {
 			fmt.Println("Invalid input. Please enter a number.")
 			continue
 		}
